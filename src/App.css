@@ -13,6 +13,44 @@
   }
 }
 
+h1 {
+  margin-top: -12px;
+}
+
+p {
+  margin-top: -42px;
+}
+
+.eGlowCharacter {
+  color: white;
+  animation-name: eGlowChar;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.eGlowCharacter2 {
+  color: white;
+  animation-name: eGlowChar;
+  animation-duration: 2s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.daysleft {
+  color: tomato;
+  /*background-color: #282c30; -- Use this if you want the darkened background upto you though. */
+  border-radius: 10%;
+  animation: eGlow;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,4 +73,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+@media screen and (max-width: 720px) {
+  h1 {
+    margin-top: 0px;
+  }
+  p {
+    margin-top: -28px;
+  }
+}
+
+@keyframes eGlow {
+  from {color: tomato;}
+  to {color: crimson;}
+}
+
+@keyframes eGlowChar {
+  from {color: tomato;}
+  to {color: crimson;}
 }
